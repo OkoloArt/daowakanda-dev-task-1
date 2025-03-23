@@ -1,15 +1,7 @@
-import algosdk, { Account, waitForConfirmation } from "algosdk";
+import algosdk, { Account } from "algosdk";
 import * as algokit from "@algorandfoundation/algokit-utils";
 import * as dotenv from "dotenv";
-import client from "algosdk/dist/types/client/client";
-import {
-  TransactionSignerAccount,
-  SigningAccount,
-} from "@algorandfoundation/algokit-utils/types/account";
-import {
-  AppClient,
-  ApplicationClient,
-} from "@algorandfoundation/algokit-utils/types/app-client";
+import { ApplicationClient } from "@algorandfoundation/algokit-utils/types/app-client";
 import { SMART_CONTRACT_ARC_32 } from "./client";
 
 dotenv.config();
