@@ -104,11 +104,11 @@ const claimAsset = async (account: Account, assetId: any) => {
     .accountInformation(account.addr)
     .do();
 
-  const alreadyOptedIn = accountInfo.assets.some(
+  const alreadyClaimed = accountInfo.assets.some(
     (a: any) => a["asset-id"] === assetId && a["is-frozen"] === true
   );
 
-  if (alreadyOptedIn) {
+  if (alreadyClaimed) {
     console.log(`Already claimed asset with id: ${assetId}`);
     return;
   }
